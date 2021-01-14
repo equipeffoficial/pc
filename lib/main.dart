@@ -25,14 +25,14 @@ class MyApp extends StatelessWidget {
           //scaffoldBackgroundColor: Colors.grey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-         initialRoute: '/base',
+         initialRoute: '/',
         onGenerateRoute: (settings){
           switch(settings.name){
             case '/login':
               return MaterialPageRoute(
                   builder: (_) => LoginScreen()
               );
-            case '/base':
+            case '/':
             default:
               return MaterialPageRoute(
                   builder: (_) => BaseScreen()
