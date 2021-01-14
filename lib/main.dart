@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pc/models/albums_manager.dart';
 import 'package:pc/models/user_manager.dart';
 import 'package:pc/screens/base/base_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'models/user_manager.dart';
 import 'screens/login/login_screen.dart';
 
 
@@ -14,9 +16,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => UserManager(),
-      lazy: false,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+            create: (_) => UserManager(),
+          lazy: false,
+        ),
+        Provider(
+            create: (_) => AlbumsManager(),
+          lazy: false,
+        )
+      ],
       child: MaterialApp(
         title: 'Policia Civil',
         debugShowCheckedModeBanner: false,
