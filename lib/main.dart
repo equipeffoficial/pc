@@ -22,7 +22,16 @@ class MyApp extends StatelessWidget {
           //scaffoldBackgroundColor: Colors.grey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: BaseScreen(),
+         initialRoute: '/base',
+        onGenerateRoute: (settings){
+          switch(settings.name){
+            case '/base':
+            default:
+              return MaterialPageRoute(
+                  builder: (_) => BaseScreen()
+              );
+          }
+        },
       ),
     );
   }
