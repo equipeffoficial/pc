@@ -31,7 +31,16 @@ class BaseScreen extends StatelessWidget {
                 )
               ],
             ),
+          floatingActionButton: FloatingActionButton.extended(
+            onPressed: (){
+              showDialog(context: context, builder: (_) => SearchDialog());
+            },
+            label: Text('Pesquisar'),
+            icon: Icon(Icons.audiotrack),
+            backgroundColor: Theme.of(context).primaryColor,
+          ) ,
           ),
+
         ],
       ),
     );

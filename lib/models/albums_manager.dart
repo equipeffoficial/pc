@@ -12,13 +12,13 @@ class AlbumsManager extends ChangeNotifier {
 
   final Firestore firestore = Firestore.instance;
 
-  List<Album> _allAlbums = [];
+  List<Album> allAlbums = [];
 
   Future<void> _loadAllAlbums() async {
     final QuerySnapshot snapAlbums =
     await firestore.collection('albums').getDocuments();
 
-    _allAlbums = snapAlbums.documents.map(
+    allAlbums = snapAlbums.documents.map(
             (e) => Album.fromDocument(e)).toList();
 
       notifyListeners();
