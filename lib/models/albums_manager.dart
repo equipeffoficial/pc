@@ -22,6 +22,30 @@ class AlbumsManager extends ChangeNotifier {
     notifyListeners();
   }
 
+  List<Album> get filteredProducts {
+    final List<Album> filteredProducts = [];
+
+    if(search.isEmpty){
+      filteredProducts.addAll(allAlbums);
+    } else {
+
+      filteredProducts.addAll(
+          allAlbums.where(
+                  (p) => p.name.toLowerCase().contains(search.toLowerCase()),
+
+          ),
+      );
+
+      filteredProducts.addAll(
+        allAlbums.where(
+            (p) => p.artist.toLowerCase().contains(search.toLowerCase()),
+        )
+      );
+    }
+
+    return filteredProducts;
+  }
+
   Future<void> _loadAllAlbums() async {
     final QuerySnapshot snapAlbums =
     await firestore.collection('albums').getDocuments();
