@@ -14,6 +14,14 @@ class AlbumsManager extends ChangeNotifier {
 
   List<Album> allAlbums = [];
 
+  String _search = '';
+
+  String get search => _search;
+  set search(String value){
+    _search = value;
+    notifyListeners();
+  }
+
   Future<void> _loadAllAlbums() async {
     final QuerySnapshot snapAlbums =
     await firestore.collection('albums').getDocuments();
