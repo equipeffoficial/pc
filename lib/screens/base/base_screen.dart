@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pc/models/page_manager.dart';
 import 'package:pc/screens/base/search_dialog.dart';
-import 'package:pc/screens/login/login_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../common/custom_drawer/custom_drawer.dart';
@@ -32,9 +31,9 @@ class BaseScreen extends StatelessWidget {
               ],
             ),
           floatingActionButton: FloatingActionButton.extended(
-            onPressed: (){
+            onPressed: ()  {
               showDialog(context: context, builder: (_) => SearchDialog());
-            },
+              },
             label: Text('Pesquisar'),
             icon: Icon(Icons.audiotrack),
             backgroundColor: Theme.of(context).primaryColor,

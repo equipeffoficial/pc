@@ -45,14 +45,7 @@ class AlbumListTile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
-                    'R\$ 19.99',
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w800,
-                        color: Theme.of(context).primaryColor
-                    ),
-                  )
+
                 ],
               ),
             )

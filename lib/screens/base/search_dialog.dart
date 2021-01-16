@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pc/models/albums_manager.dart';
+import 'package:pc/screens/albums/components/album_list_tile.dart';
+import 'package:provider/provider.dart';
 
 class SearchDialog extends StatelessWidget {
   @override
@@ -19,17 +22,31 @@ class SearchDialog extends StatelessWidget {
                   prefixIcon: IconButton(
                     icon: Icon(Icons.arrow_back),
                     color: Colors.grey[700],
-                    onPressed: (){
+                    onPressed: () {
                       Navigator.of(context).pop();
                     },
-                  )
-              ),
-              onFieldSubmitted: (text){
+                  )),
+              onFieldSubmitted: (text) {
                 Navigator.of(context).pop(text);
               },
             ),
           ),
-        )
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 65, left: 4, right: 4),
+          child: Container(
+            color: Colors.transparent,
+            child: Consumer<AlbumsManager>(
+              builder: (_, albumManager, __) {
+                return ListView.builder(
+                    itemCount: albumManager.allAlbums.length,
+                    itemBuilder: (_, index) {
+                      return AlbumListTile(albumManager.allAlbums[index]);
+                    });
+              },
+            ),
+          ),
+        ),
       ],
     );
   }
