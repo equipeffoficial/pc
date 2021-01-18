@@ -15,7 +15,7 @@ class AlbumsScreen extends StatelessWidget {
         title: Consumer<AlbumsManager>(
           builder: (_, albumsManager, __){
             if(albumsManager.search.isEmpty){
-              return const Text('Produtos');
+              return const Text('Ouça Agora');
             } else {
               return LayoutBuilder(
                 builder: (_, constraints){

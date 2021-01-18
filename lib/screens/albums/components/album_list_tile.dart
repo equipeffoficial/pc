@@ -14,7 +14,7 @@ class AlbumListTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(4)
       ),
       child: Container(
-        height: 100,
+        height: 125,
         padding: const EdgeInsets.all(8),
         child: Row(
           children: <Widget>[
@@ -29,18 +29,19 @@ class AlbumListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    album.name,
+                    'Album: ${album.name}',
                     style: TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w800,
+                      color:  Colors.grey[600]
                     ),
                   ),
+
                   Padding(
-                    padding: const EdgeInsets.only(top: 4),
+                    padding: const EdgeInsets.only(top: 0.5),
                     child: Text(
-                      'A partir de',
+                      'Artista: ${album.artist}',
                       style: TextStyle(
-                        color: Colors.grey[400],
+                        color: Colors.grey[600],
                         fontSize: 12,
                       ),
                     ),
