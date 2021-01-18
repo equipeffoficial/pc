@@ -4,7 +4,7 @@ class SearchDialog extends StatelessWidget {
 
   const SearchDialog(this.initialText);
 
-  final String initialText;
+ final String initialText;
 
   @override
   Widget build(BuildContext context) {
