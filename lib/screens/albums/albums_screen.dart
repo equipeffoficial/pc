@@ -16,15 +16,33 @@ class AlbumsScreen extends StatelessWidget {
         title: const Text('Ouça Agora'),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () async {
-             final search = await showDialog(context: context, builder: (_) => SearchDialog());
-             if(search != null){
-               context.read<AlbumsManager>().search = search;
-             }
-            },
-          )
+          Consumer(
+              builder: (_, albumsManager, __){
+              if(albumsManager.search.isEmpty) {
+                return IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: () async {
+                    final search = await showDialog(
+                        context: context, builder: (_) => SearchDialog());
+                    if (search != null) {
+                      albumsManager.search = search;
+                    }
+                  },
+                );
+              }else{
+                return IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () async {
+                    final search = await showDialog(
+                        context: context, builder: (_) => SearchDialog());
+                    if (search != null) {
+                      albumsManager.search = '';
+                    }
+                  },
+                );
+              }
+              }
+              )
         ],
       ),
       body: Consumer<AlbumsManager>(
