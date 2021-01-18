@@ -11,6 +11,7 @@ class Album{
     description = document['description'] as String;
     image = document['image'] as String;
     artist = document['artist'] as String;
+
   }
 
   String id;
@@ -18,6 +19,7 @@ class Album{
   String description;
   String image;
   String artist;
+
 
 
 }

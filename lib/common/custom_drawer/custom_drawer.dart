@@ -16,6 +16,11 @@ class CustomDrawer extends StatelessWidget {
             title: 'Inicio',
             page: 0,
           ),
+          DrawerTile(
+            iconData: Icons.queue_music,
+            title: 'Ouvir agora',
+            page: 1,
+          ),
         ],
       ),
     );

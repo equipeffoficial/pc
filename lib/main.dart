@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pc/models/albums_manager.dart';
 import 'package:pc/models/user_manager.dart';
+import 'package:pc/screens/albums/albums_screen.dart';
 import 'package:pc/screens/base/base_screen.dart';
+import 'package:pc/screens/base/search_dialog.dart';
 import 'package:provider/provider.dart';
 
+import 'common/custom_drawer/drawer_title.dart';
 import 'models/user_manager.dart';
 import 'screens/login/login_screen.dart';
 
@@ -43,6 +46,13 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(
                   builder: (_) => LoginScreen()
               );
+
+            case '/albums':
+              return MaterialPageRoute(
+                  builder: (_) => AlbumsScreen()
+              );
+
+
             case '/':
             default:
               return MaterialPageRoute(
@@ -51,6 +61,7 @@ class MyApp extends StatelessWidget {
           }
         },
       ),
+
     );
   }
 }
