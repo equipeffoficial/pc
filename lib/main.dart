@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pc/models/album.dart';
 import 'package:pc/models/albums_manager.dart';
 import 'package:pc/models/user_manager.dart';
+import 'package:pc/screens/album/album_screen.dart';
 import 'package:pc/screens/albums/albums_screen.dart';
 import 'package:pc/screens/base/base_screen.dart';
 import 'package:pc/screens/base/search_dialog.dart';
@@ -51,8 +53,12 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(
                   builder: (_) => AlbumsScreen()
               );
-
-
+            case '/album':
+              return MaterialPageRoute(
+                  builder: (_) => AlbumScreen(
+                      settings.arguments as Album
+                  )
+              );
             case '/':
             default:
               return MaterialPageRoute(
