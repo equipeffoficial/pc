@@ -16,23 +16,24 @@ class AlbumScreen extends StatelessWidget {
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
-      body: ListView(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 30, right: 20, left: 20),
+            padding: const EdgeInsets.only(top: 30),
             child: Text(
               '${album.name}',
               style: TextStyle(
                 color: Colors.grey[800],
-                fontSize: 30,
+                fontSize: 20,
                 fontWeight: FontWeight.bold
               ),
             ),
           ),
           Padding(
-            padding:  const EdgeInsets.only(top: 8, right: 20, left: 20, bottom: 25),
+            padding:  const EdgeInsets.only(top: 8, bottom: 25, right: 20, left: 20),
             child: Text(
-              '${album.description}',
+              'Descrição: ${album.description}',
               style: TextStyle(
                   color: Colors.grey[800],
                   fontSize: 12,
@@ -51,7 +52,7 @@ class AlbumScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:  const EdgeInsets.only(top: 10, right: 50, left: 20),
+            padding:  const EdgeInsets.only(top: 10),
             child: Text(
               'Artista: ${album.artist}',
               textAlign: TextAlign.end,
@@ -62,6 +63,15 @@ class AlbumScreen extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 20,),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topRight:Radius.circular(30), topLeft: Radius.circular(30)),
+                color: Colors.black87
+              ),
+            ),
+          )
         ],
       )
     );
