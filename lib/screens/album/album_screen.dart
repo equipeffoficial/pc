@@ -53,7 +53,7 @@ class AlbumScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:  const EdgeInsets.only(top: 8),
+            padding:  const EdgeInsets.only(top: 8, bottom: 40),
             child: Text(
               'Artista: ${album.artist}',
               textAlign: TextAlign.end,
@@ -63,6 +63,38 @@ class AlbumScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold
               ),
             ),
+          ),
+          Divider(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              FlatButton(
+                onPressed: null,
+                child: Icon(
+                  Icons.skip_previous_rounded,
+                  color: Colors.black87,
+                  size: 50,
+                ),
+              ),
+              SizedBox(width: 30,),
+              FlatButton(
+                onPressed: null,
+                child: Icon(
+                  Icons.play_arrow,
+                  color: Colors.black87,
+                  size: 50,
+                ),
+              ),
+              SizedBox(width: 30,),
+              FlatButton(
+                onPressed: null,
+                child: Icon(
+                  Icons.skip_next,
+                  color: Colors.black87,
+                  size: 50,
+                ),
+              ),
+            ],
           ),
         ],
       )
