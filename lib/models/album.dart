@@ -11,6 +11,7 @@ class Album{
     description = document['description'] as String;
     image = document['image'] as String;
     artist = document['artist'] as String;
+    musics = List<String>.from(document.data['images'] as List<dynamic>);
 
 
   }
@@ -20,6 +21,7 @@ class Album{
   String description;
   String image;
   String artist;
+  List<String> musics;
 
 
 
