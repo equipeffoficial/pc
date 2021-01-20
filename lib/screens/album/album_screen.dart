@@ -7,8 +7,11 @@ class AlbumScreen extends StatelessWidget {
 
   final Album album;
 
+
   @override
   Widget build(BuildContext context) {
+
+
 
     return Scaffold(
       appBar: AppBar(
@@ -21,38 +24,36 @@ class AlbumScreen extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 30),
-            child: Text(
-              '${album.name}',
-              style: TextStyle(
-                color: Colors.grey[800],
-                fontSize: 20,
-                fontWeight: FontWeight.bold
+            child: Center(
+              child: Expanded(
+                child: SizedBox(
+                  height: 250,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: AspectRatio(
+                    aspectRatio: 1,
+                      child: Image.network(
+                          album.image,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
           Padding(
-            padding:  const EdgeInsets.only(top: 8, bottom: 25, right: 20, left: 20),
+            padding: const EdgeInsets.only(top: 8),
             child: Text(
-              'Descrição: ${album.description}',
+              'Album: ${album.name}',
               style: TextStyle(
                   color: Colors.grey[800],
-                  fontSize: 12,
+                  fontSize: 13,
                   fontWeight: FontWeight.bold
               ),
             ),
           ),
-          Center(
-            child: ClipRRect(   
-            borderRadius: BorderRadius.circular(20),
-              child: Image.network(
-                  album.image,
-                height: 280,
-                width: 280,
-              ),
-            ),
-          ),
           Padding(
-            padding:  const EdgeInsets.only(top: 10),
+            padding:  const EdgeInsets.only(top: 8),
             child: Text(
               'Artista: ${album.artist}',
               textAlign: TextAlign.end,
@@ -63,15 +64,6 @@ class AlbumScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(topRight:Radius.circular(30), topLeft: Radius.circular(30)),
-                color: Colors.black87
-              ),
-            ),
-          )
         ],
       )
     );
