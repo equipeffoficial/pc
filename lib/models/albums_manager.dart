@@ -28,10 +28,10 @@ class AlbumsManager extends ChangeNotifier {
     } else {
       filteredAlbums.addAll(
         allAlbums.where((p) =>
-            p.name.toLowerCase().contains(search.toLowerCase()) ||
+        p.name.toLowerCase().contains(search.toLowerCase()) ||
             p.artist.toLowerCase().contains(search.toLowerCase()) ||
             p.description.toLowerCase().contains(search.toLowerCase())
-         ) ,
+        ) ,
       );
     }
 
@@ -40,7 +40,7 @@ class AlbumsManager extends ChangeNotifier {
 
   Future<void> _loadAllAlbums() async {
     final QuerySnapshot snapAlbums =
-        await firestore.collection('albums').getDocuments();
+    await firestore.collection('albums').getDocuments();
 
     allAlbums = snapAlbums.documents.map((e) => Album.fromDocument(e)).toList();
 

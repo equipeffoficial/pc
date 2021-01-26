@@ -5,10 +5,7 @@ import 'package:pc/models/user_manager.dart';
 import 'package:pc/screens/album/album_screen.dart';
 import 'package:pc/screens/albums/albums_screen.dart';
 import 'package:pc/screens/base/base_screen.dart';
-import 'package:pc/screens/base/search_dialog.dart';
 import 'package:provider/provider.dart';
-
-import 'common/custom_drawer/drawer_title.dart';
 import 'models/user_manager.dart';
 import 'screens/login/login_screen.dart';
 
@@ -24,11 +21,11 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-            create: (_) => UserManager(),
+          create: (_) => UserManager(),
           lazy: false,
         ),
         ChangeNotifierProvider(
-            create: (_) => AlbumsManager(),
+          create: (_) => AlbumsManager(),
           lazy: false,
         )
       ],
@@ -36,10 +33,12 @@ class MyApp extends StatelessWidget {
         title: 'Policia Civil',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+
           primaryColor: Colors.black,
+          //scaffoldBackgroundColor: Colors.grey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-         initialRoute: '/',
+        initialRoute: '/',
         onGenerateRoute: (settings){
           switch(settings.name){
             case '/login':
@@ -55,8 +54,9 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(
                   builder: (_) => AlbumScreen(
                       settings.arguments as Album
-                  )
+                  ),
               );
+
             case '/':
             default:
               return MaterialPageRoute(

@@ -62,8 +62,8 @@ class AlbumsScreen extends StatelessWidget {
                       albumsManager.search = '';
                     },
                   );
-            }
-          })
+                }
+              })
         ],
       ),
       body: Consumer<AlbumsManager>(

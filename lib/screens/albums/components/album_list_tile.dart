@@ -15,16 +15,22 @@ class AlbumListTile extends StatelessWidget {
       },
       child: Card(
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(4)
+            borderRadius: BorderRadius.circular(1)
         ),
         child: Container(
           height: 125,
           padding: const EdgeInsets.all(8),
           child: Row(
             children: <Widget>[
-              AspectRatio(
-                aspectRatio: 1,
-                child: Image.network(album.image),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 5),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Image.network(album.image),
+                  ),
+                ),
               ),
               const SizedBox(width: 16,),
               Expanded(
@@ -33,20 +39,23 @@ class AlbumListTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Album: ${album.name}',
+                      '${album.artist}',
                       style: TextStyle(
-                        fontSize: 16,
-                        color:  Colors.grey[600]
+                          fontSize: 18,
+                          color:  Colors.black87,
+                          fontWeight: FontWeight.bold
+
                       ),
                     ),
+                    
 
                     Padding(
                       padding: const EdgeInsets.only(top: 0.5),
                       child: Text(
-                        'Artista: ${album.artist}',
+                        'Album: ${album.name}',
                         style: TextStyle(
                           color: Colors.grey[600],
-                          fontSize: 12,
+                          fontSize: 14,
                         ),
                       ),
                     ),
