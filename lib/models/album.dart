@@ -9,8 +9,10 @@ class Album{
     description = document['description'] as String;
     image = document['image'] as String;
     artist = document['artist'] as String;
-    musics = (document.data['musics'] as List<dynamic>).map(
-            (m) => Music()).toList();
+    musics = (document.data['musics'] as List<dynamic> ?? []).map(
+            (m) => Music.formMap(m as Map<String, dynamic>)).toList();
+
+    print(musics);
 
 
   }
