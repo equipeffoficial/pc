@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:pc/models/album.dart';
 import 'package:pc/screens/album/components/card_info_widget.dart';
+import 'package:pc/screens/album/components/card_player_widget.dart';
 
 class AlbumScreen extends StatelessWidget {
 
@@ -51,7 +52,7 @@ class AlbumScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding:  const EdgeInsets.only(top: 8, bottom: 40),
+              padding:  const EdgeInsets.only(top: 8, bottom: 10),
               child: Text(
                 'Artista: ${album.artist}',
                 textAlign: TextAlign.end,
@@ -62,44 +63,9 @@ class AlbumScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  FlatButton(
-                    onPressed: null,
-                    child: Icon(
-                      Icons.skip_previous_rounded,
-                      color: Colors.black87,
-                      size: 50,
-                    ),
-                  ),
-                  SizedBox(width: 30,),
-                  FlatButton(
-                    onPressed: null,
-                    child: Icon(
-                      Icons.play_arrow,
-                      color: Colors.black87,
-                      size: 50,
-                    ),
-                  ),
-                  SizedBox(width: 30,),
-                  FlatButton(
-                    onPressed: null,
-                    child: Icon(
-                      Icons.skip_next,
-                      color: Colors.black87,
-                      size: 50,
-                    ),
-                  ),
-                ],
-              ),
-            ),
             CardInfoWidget(album),
-
-
+            SizedBox(height: 20,),
+            CardPlayerWidget(),
           ],
         ),
     );

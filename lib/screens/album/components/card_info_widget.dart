@@ -28,22 +28,23 @@ class CardInfoWidget extends StatelessWidget {
                       Text(
                         "Detalhes do Album",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           color: Colors.white,
+                         // fontWeight: FontWeight.bold
                         ),
                       ),
                       Text(
                         "Clique aqui ...",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 18, color: Colors.white70),
                       ),
                     ],
                   ),
                 ),
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.all(15),
+                    margin: EdgeInsets.symmetric(horizontal: 20),
                     child: Text("${album.description}",
-                        style: TextStyle(fontSize: 18, color: Colors.white)),
+                        style: TextStyle(fontSize: 17, color: Colors.white70)),
                   )
                 ],
               )),

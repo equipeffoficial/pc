@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pc/models/music.dart';
+
 
 class Album{
 
@@ -9,10 +9,7 @@ class Album{
     description = document['description'] as String;
     image = document['image'] as String;
     artist = document['artist'] as String;
-    musics = (document.data['musics'] as List<dynamic> ?? []).map(
-            (m) => Music.formMap(m as Map<String, dynamic>)).toList();
 
-    print(musics);
 
 
   }
@@ -22,7 +19,7 @@ class Album{
   String description;
   String image;
   String artist;
-  List<Music> musics;
+
 
 
 
