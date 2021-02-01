@@ -64,7 +64,7 @@ class AlbumScreen extends StatelessWidget {
               ),
             ),
             CardInfoWidget(album),
-            SizedBox(height: 20,),
+            SizedBox(height: 18,),
             CardPlayerWidget(),
           ],
         ),

@@ -6,7 +6,7 @@ class CardPlayerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(      
+      child: Container(
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
             color: Colors.black87,
