@@ -60,6 +60,12 @@ flutter:
    - asserts/images/marilia.jpg
    - asserts/images/banner1.jpg
    - asserts/images/banner2.jpg
+   - asserts/images/album1.jpg
+   - asserts/images/album2.jpg
+   - asserts/images/album3.jpg
+   - asserts/images/album4.jpg
+   - asserts/images/album5.jpg
+   - asserts/images/album7.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
