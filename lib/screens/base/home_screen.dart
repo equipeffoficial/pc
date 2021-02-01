@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold
                   ),)),
               SectionLittle(),
-              SizedBox(height: 10,),
+              SizedBox(height: 20,),
               SectionBanner(),
             ],
           ),

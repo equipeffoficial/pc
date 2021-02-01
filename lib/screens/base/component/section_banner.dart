@@ -15,34 +15,25 @@ class SectionBanner extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: [
                 ClipRRect(
-                  child: Image.asset(
-                      'asserts/images/gusttavo.jpg'
+                  borderRadius: BorderRadius.circular(15),
+                  child: AspectRatio(
+                    aspectRatio: 4 / 2,
+                    child: Image.asset(
+                        'asserts/images/banner1.jpg'
+                    ),
                   ),
                 ),
                 SizedBox(width: 15,),
                 ClipRRect(
-                  child: Image.asset(
-                      'asserts/images/henrique.jpg'
+                  borderRadius: BorderRadius.circular(15),
+                  child: AspectRatio(
+                    aspectRatio: 4 / 2,
+                    child: Image.asset(
+                        'asserts/images/banner2.jpg'
+                    ),
                   ),
                 ),
                 SizedBox(width: 15,),
-                ClipRRect(
-                  child: Image.asset(
-                      'asserts/images/jorge.jpg'
-                  ),
-                ),
-                SizedBox(width: 15,),
-                ClipRRect(
-                  child: Image.asset(
-                      'asserts/images/maiara.jpg'
-                  ),
-                ),
-                SizedBox(width: 15,),
-                ClipRRect(
-                  child: Image.asset(
-                      'asserts/images/marilia.jpg'
-                  ),
-                ),
               ],
             ),
           ),

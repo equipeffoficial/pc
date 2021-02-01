@@ -58,6 +58,9 @@ flutter:
    - asserts/images/jorge.jpg
    - asserts/images/maiara.jpg
    - asserts/images/marilia.jpg
+   - asserts/images/banner1.jpg
+   - asserts/images/banner2.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
