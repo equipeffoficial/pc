@@ -35,7 +35,7 @@ class  CustomDrawerHeader extends StatelessWidget {
                       ? 'Sair'
                       : 'Entrar >',
                   style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.red[800],
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
