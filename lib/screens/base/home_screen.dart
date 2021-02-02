@@ -7,7 +7,6 @@ import 'package:pc/screens/base/component/section_little.dart';
 
 
 class HomeScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(drawer: CustomDrawer(),
