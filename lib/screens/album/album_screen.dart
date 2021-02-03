@@ -43,11 +43,22 @@ class AlbumScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 8),
               child: Text(
+                ' ${album.music}',
+                style: TextStyle(
+                    color: Colors.grey[800],
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text(
                 'Album: ${album.name}',
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontSize: 13,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.normal
                 ),
               ),
             ),
@@ -59,7 +70,7 @@ class AlbumScreen extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.grey[800],
                     fontSize: 13,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.normal
                 ),
               ),
             ),

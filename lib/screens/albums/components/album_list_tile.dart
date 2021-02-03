@@ -33,34 +33,42 @@ class AlbumListTile extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 16,),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      '${album.artist}',
-                      style: TextStyle(
-                          fontSize: 18,
-                          color:  Colors.black87,
-                          fontWeight: FontWeight.bold
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        '${album.music}',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color:  Colors.black87,
+                            fontWeight: FontWeight.bold
 
+                        ),
                       ),
-                    ),
-                    
+                      Text(
+                        '${album.artist}',
+                        style: TextStyle(
+                            fontSize: 14,
+                            color:  Colors.black87,
+                            fontWeight: FontWeight.normal
 
-                    Padding(
-                      padding: const EdgeInsets.only(top: 0.5),
-                      child: Text(
-                        'Album: ${album.name}',
+                        ),
+                      ),
+
+                      Text(
+                        '${album.name}',
                         style: TextStyle(
                           color: Colors.grey[600],
                           fontSize: 14,
                         ),
                       ),
-                    ),
 
-                  ],
+                    ],
+                  ),
                 ),
               )
             ],
