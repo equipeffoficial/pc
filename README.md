@@ -29,6 +29,13 @@ O BackEnd foi feito através do Firebase, uma ferramenta da Google em nuvem que 
  - Na barra de menu lateral temos a opção "Ouça Agora", onde leva para uma tela de albums que no caso já traz todos os albuns cadastrados no banco de dados, podendo aplicar um filtro por nome da musica, nome do artista ou nome do album.
  - Na tela do album selecionado propriamente dito, é apresentado as informações(imagem) do album que também está sendo puxada do banco de dados. O card inferior com controles de player de audio é somente ilustrativo e não tem nenhuma funcionalidade por enquanto.
   
+## Componentização do projeto
+ - Na pasta raiz do projeto existe a pasta "asserts" que é referente as imagens utilizadas de forma local/estática no projeto.
+ - A pasta "commom" seria algo comum em todas as telas, que no caso só tem como subpasta a "custom_drawer"(que são os widgets do menu lateral).
+ -  A pasta "helpers", separei por não se enquadra no conceito que usei para os outros, ela tem 2 (dois) arquivos, 1(um) que são os retornos de erros do firebase e outro é um validador de email. 
+ - Na pasta "models" estão todos os arquivos referentes a regra de negocio do aplicativo, exemplo: Processo de login .
+ - Na pasta "screens" estão todas as subpastas referentes  as telas(parte visual) do aplicativo.
+ - Dentro de cada pasta das telas, existe a subpasta "components" que é referente à widgets daquela determinado tela, no qual, optei em componentizar.
  
  
 ## Como executar/testar a solução ?
