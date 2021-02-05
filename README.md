@@ -50,6 +50,9 @@ O BackEnd foi feito através do Firebase, uma ferramenta da Google em nuvem que 
   - Baixar o código do projeto no GIT e descompactar na pasta C:\Users\felipe.neto\AndroidStudioProjects
   - Abri essa pasta (C:\Users\felipe.neto\ criar a pasta AndroidStudioProjects\pc) em sua IDE e executar .
   
+ 
+## Link com ScreenShots do aplicativo
+ - https://drive.google.com/drive/folders/1V5ChvUn7CkljYhNmEkBpLZBr_03Pdjis?usp=sharing
 
 
 ## Vídeo do Aplicativo
