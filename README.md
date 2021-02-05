@@ -1,7 +1,12 @@
-# pc
+# Projeto da Polícia Civil
 
 Candidato: Felipe Marques de Souza Neto 
 CPF: 021.815.581-67
+
+## A pessoa
+Me chamo Felipe, Sou Analista de Sistema/Desenvolvedor, Me candidatei a essa vaga porque adoro desafios, tenho 24 anos e acredito que niguém sabe de tudo, ou seja, sempre tem espaço para aprender mais, isso me deixa um pouco à frente dos demais, porque muitos acreditam saber mais do que realmente sabem, e eu acredito saber sempre menos do que realmente sei, para que me force a ser melhor.
+
+VAMOS AO PROJETO...
 
 ## Intro
 O projeto se iniciou devido o processo seletivo da Polícia Civil, pude listar como prioridade os seguintes tópicos:
@@ -50,12 +55,21 @@ O BackEnd foi feito através do Firebase, uma ferramenta da Google em nuvem que 
   - Baixar o código do projeto no GIT e descompactar na pasta C:\Users\felipe.neto\AndroidStudioProjects
   - Abri essa pasta (C:\Users\felipe.neto\ criar a pasta AndroidStudioProjects\pc) em sua IDE e executar .
   
+  
+ ## Observações - A falha no comprimento dos requisitos
+  
+  Tive um problema com a APK no momento de testar em um dispositivo real, a tela do album, onde é semelhante a um player de audio não está aparecendo, quando testado em um dispositivo real, aparentemente o problema se deu somente na versão release.
  
-## Link com ScreenShots do aplicativo
- - https://drive.google.com/drive/folders/1V5ChvUn7CkljYhNmEkBpLZBr_03Pdjis?usp=sharing
+  A versão debug que foi executada através de cabo USB, está normal e a executada em emulador também. Nos screenshots e vídeo abaixo podemos confirmar isso. Mas de qualquer forma deixarei o link para download das APKs, serão 3 APKs, para versões diferentes do Android.
+  
 
+## Link APKs
+https://drive.google.com/drive/folders/16Vn-xUENorUdZ4XlOt7PcBudLYuKyqJv?usp=sharing 
+  
+
+## Link com ScreenShots do aplicativo
+https://drive.google.com/drive/folders/1V5ChvUn7CkljYhNmEkBpLZBr_03Pdjis?usp=sharing
 
 ## Vídeo do Aplicativo
-
 https://youtu.be/JzQkBoY1m6Y
 
